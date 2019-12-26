@@ -1,0 +1,342 @@
+\documentclass[aps,prl,groupedaddress,amsmath,amssymb,nofootinbib,11pt]{revtex4-1}
+\pdfoutput=1
+\oddsidemargin -40pt
+ \evensidemargin -40pt
+\hyphenpenalty=10000
+\usepackage[
+top    = 2.1cm,
+bottom = 2 cm,
+left   = 1.9cm,
+right  = 1.9cm]{geometry}
+\usepackage[utf8]{inputenc}
+
+\def\thesection{\Roman{section}}
+
+%\usepackage{mathrsfs}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{enumerate}
+\usepackage{amsfonts}
+\usepackage{slashed}
+\usepackage[colorlinks=true,linkcolor=ForestGreen, citecolor=ForestGreen,urlcolor=ForestGreen]{hyperref}
+
+\usepackage{etoolbox}
+
+%\usepackage[notref,notcite]{showkeys}
+
+
+
+
+%\usepackage[notref,notcite]{showkeys}
+%\usepackage{showkeys}
+
+
+
+
+
+\usepackage{graphicx}
+\usepackage{bm}
+
+
+\linespread{1.196}
+
+
+\definecolor{davecolor}{rgb}{0.95,  0.5,  0.2}
+\def\DV#1{{\color{davecolor}{\bf #1}}}
+
+\def\del{\partial}
+
+\def\eg{{\it e.g.}}
+\def\ie{{\it i.e.}}
+\def\cf{{\it c.f. }}
+\def\etal{{\it et. al.}}
+
+
+
+\def\({\left(}
+\def\){\right)}
+
+\def\<{\langle}
+\def\>{\rangle}
+%\def\half{{1\over 2}}
+
+\def\CA{{\cal A}}
+\def\CC{{\cal C}}
+\def\CD{{\cal D}}
+\def\CE{{\cal E}}
+\def\CF{{\cal F}}
+\def\CG{{\cal G}}
+\def\CT{{\cal T}}
+\def\CM{{\cal M}}
+\def\CN{{\cal N}}
+\def\CO{{\cal O}}%AEL
+\def\CP{{\cal P}}
+\def\CL{{\cal L}}
+\def\CV{{\cal V}}
+\def\CS{{\cal S}}
+\def\CW{{\cal W}}
+\def\CX{{\cal X}}%AEL
+%\def\bra#1{{\langle}#1|}
+%\def\ket#1{|#1\rangle}
+\def\bbra#1{{\langle\langle}#1|}
+\def\kket#1{|#1\rangle\rangle}
+%\def\vev#1{\langle{#1}\rangle}
+\def\Dslash{\rlap{\hskip0.2em/}D}
+\def\CDslash{\rlap{\hskip0.2em/}{\CD}}
+
+\def\DDslash{{\cal L}}
+%\def\Dslash{\rlap{\hskip0.2em/}D}
+%\def\vev#1{\langle#1 \rangle}
+%\def\CO{{\cal O}}
+%\def\half{{1\over 2}}
+
+
+\newcommand{\cit}[1]{  [{\bf\texttt{#1}}]}
+
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+
+
+\def\Tr{\mathop{\rm Tr}}
+\def\tr{\mathop{\rm tr}}
+
+\newcommand\half{{\ensuremath{\frac{1}{2}}}}
+\newcommand\p{\ensuremath{\partial}}
+\newcommand\evalat[2]{\ensuremath{\left.{#1}\right|_{#2}}}
+\newcommand\abs[1]{\ensuremath{\left\lvert{#1}\right\rvert}}
+\newcommand\no[1]{{{:}{#1}{:}}}
+\newcommand\transpose{{\ensuremath{\text{\sf T}}}}
+\newcommand\field[1]{{\ensuremath{\mathbb{{#1}}}}}
+\newcommand\order[1]{{\ensuremath{{\mathcal O}({#1})}}}
+\newcommand\vev[1]{{\ensuremath{\left\langle{#1}\right\rangle}}}
+\newcommand\anti[2]{\ensuremath{\bigl\{{#1},{#2}\bigr\}}}
+\newcommand\com[2]{\ensuremath{\bigl[{#1},{#2}\bigr]}}
+\newcommand\ket[1]{\ensuremath{\lvert{#1}\rangle}}
+\newcommand\bra[1]{\ensuremath{\langle{#1}\rvert}}
+\newcommand\lie[2]{\ensuremath{\pounds_{{#1}} {#2}}}
+%\newcommand\sfrac[2]{\ensuremath{{({#1})}/{({#2})}}} % or
+\newcommand\sfrac[2]{\ensuremath{\frac{#1}{#2}}}
+\newcommand\lvec[2][]{\ensuremath{\overleftarrow{{#2}_{#1}}}}
+\newcommand\rvec[2][]{\ensuremath{\overrightarrow{{#2}_{#1}}}}
+%\newcommand\lvec[2][]{\ensuremath{\vec{{#2}}_{#1}}}
+%\newcommand\rvec[2][]{\ensuremath{\stackrel{\rightarrow}{{#2}}_{#1}}}
+
+
+\newcommand{\myfig}[3]{
+	\begin{figure}[ht]
+	\centering
+	\includegraphics[width=#2cm]{figs/#1}\caption{#3}\label{fig:#1}
+	\end{figure}
+	}
+\newcommand{\littlefig}[2]{
+	\includegraphics[width=#2cm]{figs/#1}
+	}
+
+
+\newcommand\speceq{\ensuremath{\stackrel{\star}{=}}}
+\newcommand\conj[1]{{\ensuremath{\left({#1}\right)^*}}}
+
+
+
+%\newcommand{\field}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\A}{\field{A}}
+%\newcommand{\CC}{\field{C}}
+\newcommand{\DD}{\field{D}}
+\newcommand{\J}{\field{J}}
+\newcommand{\GG}{\field{G}}
+\newcommand{\FF}{\field{F}}
+\newcommand{\QQ}{\field{Q}}
+\newcommand{\HH}{\field{H}}
+\newcommand{\LL}{\field{L}}
+\newcommand{\KK}{\field{K}}
+\newcommand{\NN}{\field{N}}
+\newcommand{\PP}{\field{P}}
+\newcommand{\RR}{\field{R}}
+\newcommand{\TT}{\field{T}}
+\newcommand{\ZZ}{\field{Z}}
+
+
+
+
+
+\newcommand{\be}{\begin{equation*}}
+\newcommand{\ee}{\end{equation*}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bwt}{\begin{widetext}}
+\newcommand{\ewt}{\end{widetext}}
+\newcommand{\nn}{\nonumber\\}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\bca}{\begin{cases}}
+\newcommand{\eca}{\end{cases}}
+\newcommand{\bln}{\begin{align}}
+\newcommand{\eln}{\end{align}}
+\newcommand{\bst}{\begin{split}}
+\newcommand{\est}{\end{split}}
+
+\newcommand\al{{\alpha}}
+\newcommand\ep{\epsilon}
+\newcommand\sig{\sigma}
+\newcommand\Sig{\Sigma}
+\newcommand\lam{\lambda}
+\newcommand\Lam{\Lambda}
+\newcommand\om{\omega}
+\newcommand\Om{\Omega}
+\newcommand\vt{\vartheta}
+\newcommand\ga{{\ensuremath{{\gamma}}}}
+\newcommand\Ga{{\ensuremath{{\Gamma}}}}
+\newcommand\de{{\ensuremath{{\delta}}}}
+\newcommand\De{{\ensuremath{{\Delta}}}}
+\newcommand\vp{\varphi}
+\newcommand\ze{{\zeta}}
+
+\newcommand\da{{\dagger}}
+\newcommand\nab{{\nabla}}
+\newcommand\Th{{\Theta}}
+\def\th{{\theta}}
+
+\newcommand\ra{{\rightarrow}}
+\newcommand\Lra{{\Longrightarrow}}
+\newcommand\ov{\over}
+\newcommand\ha{{\half}}
+\newcommand\papr{{2 \pi \apr}}
+\newcommand\apr{{\ensuremath{{\alpha'}}}}
+\def\le{\left}
+\def\ri{\right}
+
+\newcommand\sA{{\ensuremath{{\mathcal A}}}}
+\newcommand\sB{{\ensuremath{{\mathcal B}}}}
+\newcommand\sC{{\ensuremath{{\mathcal C}}}}
+\newcommand\sD{{\ensuremath{{\mathcal D}}}}
+\newcommand\sF{{\ensuremath{{\mathcal F}}}}
+\newcommand\sI{{\ensuremath{{\mathcal I}}}}
+\newcommand\sG{{\ensuremath{{\mathcal G}}}}
+\newcommand\sK{{\ensuremath{{\mathcal K}}}}
+\newcommand\sH{{\ensuremath{{\mathcal H}}}}
+\newcommand\sL{{\ensuremath{{\mathcal L}}}}
+\newcommand\sM{{\ensuremath{{\mathcal M}}}}
+\newcommand\sN{{\ensuremath{{\mathcal N}}}}
+\newcommand\sO{{\ensuremath{{\mathcal O}}}}
+\newcommand\sR{{\ensuremath{{\mathcal R}}}}
+\newcommand\sZ{{\ensuremath{{\mathcal Z}}}}
+\newcommand\sn{{\ensuremath{{\mathfrak n}}}}
+
+
+\newcommand\sg{g}
+
+\newcommand\sV{{\mathcal V}}
+\newcommand\sJ{{\mathcal J}}
+\newcommand\sS{{\mathcal S}}
+
+\newcommand\bQ{{\bf Q}}
+\newcommand\bT{{\bf T}}
+\newcommand\bA{{\bf A}}
+\newcommand\bB{{\bf B}}
+\newcommand\bC{{\bf C}}
+\newcommand\bR{{\bf R}}
+\newcommand\bX{{\bf X}}
+\newcommand\bY{{\bf Y}}
+\newcommand\bI{{\bf I}}
+\newcommand\bv{{\bf v}}
+\newcommand\bw{{\bf w}}
+\newcommand\bII{{\bf II}}
+\newcommand\bth{{\boldsymbol \theta}}
+\newcommand\bom{{\boldsymbol \omega}}
+\newcommand\bq{{\bf Q}_B}
+\newcommand\bfb{{\bf b}_{-1}}
+
+\newcommand\bc{{\bar c}}
+\newcommand\bb{{\bar b}}
+
+\newcommand\bpsi{{\bar \psi}}
+
+
+\renewcommand{\Im}{\textrm{Im}\,}
+\renewcommand{\Re}{\textrm{Re}\,}
+
+
+\newcommand{\rd}{\ell_2}
+\newcommand{\hmq}{\widehat \mu_q}
+\newcommand{\bone}{{\bf 1}}
+\newcommand{\vk}{{\vec k}}
+
+\newcommand\tpi{{\tilde \pi}}
+
+\def\tildem{\tilde m}
+%\def\psis{\textswab{Y}}
+\def\yandz{\Phi}
+\def\psis{\yandz}
+
+\newcommand\uz{{\underline{z}}}
+\newcommand\utau{{\underline{\tau}}}
+\newcommand\ut{{\underline{t}}}
+\newcommand\ur{{\underline{r}}}
+\newcommand\ui{{\underline{i}}}
+\newcommand\uj{{\underline{j}}}
+\newcommand\umu{{\underline{\mu}}}
+\newcommand\uy{{\underline{y}}}
+
+\newcommand{\dbyd}[1]{\ensuremath{\left(\frac{\partial}{\partial #1}\right)}}
+\newcommand{\itoj}{\ensuremath{i\leftrightarrow j}}
+\newcommand{\ux}{\underline x}
+
+
+\newcommand{\uM}{\underline M}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+
+%\def\Dslash{\rlap{\hskip0.2em/}D}
+\def\Aslash{\rlap{\hskip0.2em/}A}
+\def\pslash{\rlap{\hskip0.1em/}p}
+\def\kslash{\rlap{\hskip0.1em/}k}
+
+\newcommand\psinorm{\boldsymbol{\psi}}
+\newcommand\Psinorm{\boldsymbol{\Psi}}
+\newcommand\Phinorm{\boldsymbol{\Phi}}
+\def\vertexZ{\Lambda}
+%\def\dk{\(d\vec k\)}
+\def\Q{\mathcal{Q}}
+
+\newcommand\Psinon{\mathfrak{Y}}
+
+
+
+\begin{document}
+
+
+\section{PHYS 598 SDA RECITATION 8 - PROBLEM SET}
+
+
+\textbf{1. The Moore-Penrose Pseudoinverse:} Given an $m\times n$ matrix $\sB$, the Moore-Penrose (generalized) matrix inverse is a \emph{unique} $n\times m$ matrix pseudoinverse $\sB^+$. This matrix was independently defined by Moore in 1920 and Penrose (1955), and variously known as the generalized inverse, pseudoinverse, or Moore-Penrose inverse. 
+\vspace{1 mm}
+
+Browse through the theorems and examples in \href{http://www.math.ucla.edu/~laub/33a.2.12s/mppseudoinverse.pdf}{\texttt{this Math@UCLA link}}. Your task then is to solve the exercises at end of the PDF. Please verify with me your proof of either part (c) or (d).\\
+
+\textbf{2. The Khatri-Rao product:}  Let $\sA$ and $\sB$ be $I\times K$ and $J \times K$ matrices, respectively. The \href{https://en.wikipedia.org/wiki/Kronecker_product#Khatri-Rao_product}{Khatri-Rao product} $\sA\odot \sB$ satisfies the following properties
+\begin{itemize}
+\item
+$(\sA\odot \sB)^t(\sA\odot \sB) = (\sA^t\sA)* (\sB^t\sB)$, where $*$ denotes the \href{https://en.wikipedia.org/wiki/Hadamard_product_(matrices)}{Hadamard product}, and
+\item $(\sA\odot \sB)^+ = ((\sA^t\sA)*(\sB^t\sB))^+(\sA\odot \sB)^t$, where $^+$ denotes the Moore-Penrose pseudoinverse.
+\end{itemize}
+
+\textbf{(a)} The proofs of the above properties are worked out in the lecture notes (or just google!). Your task is to work out explicitly the first property for generic matrices with $I=J=2$ and $K=3$, preferably on a computer. (\emph{Prof. Song used a different notation for these products than what is more commonly used. We shall stick to the notation used in class, i.e. the ones above.})
+\vspace{2 mm}
+
+
+\textbf{(b)} Complete the proof of theorem \textbf{A.6.} in the lecture notes. For your convenience, the statement is
+\[(\sA \otimes \sB)^t = (\sA^t\otimes \sB^t).\]
+
+\textbf{(c)} Let $\sA_1,\ldots,\sA_p$ be orthogonal matrices. Then prove that $\sA_1\otimes \ldots \otimes \sA_p$ is an orthogonal matrix.
+\end{document}
